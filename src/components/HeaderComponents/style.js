@@ -5,6 +5,7 @@ export const WrapperHeader = styled(Row)`
 	padding: 1rem 12rem;
 	background-color: rgb(26, 148, 255);
 	align-items: center;
+	flex-wrap: nowrap;
 `;
 
 export const WrapperTextHeader = styled.span`

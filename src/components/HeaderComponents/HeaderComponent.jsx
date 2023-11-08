@@ -1,7 +1,7 @@
 import { DownOutlined, ShoppingCartOutlined, UserOutlined } from "@ant-design/icons";
-import { Col } from "antd";
+import { Badge, Col } from "antd";
 import React from "react";
-import ButtonSearch from "../ButtonSearch/ButtonSearch";
+import ButtonInputSearch from "../ButtonInputSearch/ButtonInputSearch";
 import { WrapperHeader, WrapperHeaderAccount, WrapperTextHeader } from "./style";
 
 const HeaderComponent = () => {
@@ -12,10 +12,11 @@ const HeaderComponent = () => {
 					<WrapperTextHeader>Christopher</WrapperTextHeader>
 				</Col>
 				<Col span={12}>
-					<ButtonSearch
-						size="large"
-						text="Search"
-						placeholder="Input search..."
+					<ButtonInputSearch
+						size="larger"
+						placeholder="Search more ..."
+						textButton="Tim Kim"
+						bordered={false}
 					/>
 				</Col>
 				<Col span={6} style={{ display: "flex", gap: "3rem" }}>
@@ -30,7 +31,9 @@ const HeaderComponent = () => {
 						</div>
 					</WrapperHeaderAccount>
 					<div style={{ color: "#fff" }}>
-						<ShoppingCartOutlined style={{ fontSize: "3rem" }} />
+						<Badge count={4} size="small">
+							<ShoppingCartOutlined style={{ fontSize: "3rem", color: "#fff" }} />
+						</Badge>
 						<span>Cart</span>
 					</div>
 				</Col>
